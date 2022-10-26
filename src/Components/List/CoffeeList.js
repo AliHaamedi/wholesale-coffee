@@ -3,17 +3,14 @@ import CoffeeItem from './CoffeeItem';
 
 
 function CoffeeList() {
-    const { name , price , description , image} = useSelector(state => state.coffeeList.list);
-
+    const {list} = useSelector(state => state.coffeeList);
     return (
         <div className='basis-1/2 border-2 border-slate-600 rounded-xl m-2'>
-        <CoffeeItem name={name} price={price} description={description} image={image}/>
+            <ul>
+            {list.map((i)=><li key={i.id}> <CoffeeItem name={i.name} price={i.price} description={i.description} image={i.image}/> </li>)}
+            </ul>
         </div>
     );
 }
 
 export default CoffeeList;
-
-
-
-
