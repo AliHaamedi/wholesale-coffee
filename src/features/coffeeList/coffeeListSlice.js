@@ -23,7 +23,6 @@ const initialState = {
     image: "https://upload.wikimedia.org/wikipedia/commons/c/c5/Roasted_coffee_beans.jpg"
   }
 ],
-  ordering: false,
   remainingWeight: 1000
 };
 

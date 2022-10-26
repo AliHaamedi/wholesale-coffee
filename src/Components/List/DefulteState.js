@@ -1,12 +1,11 @@
 import { useDispatch } from 'react-redux'
-import { toggle } from '../../features/coffeeList/coffeeListSlice';
 
-function DefulteState ({description}){
+function DefulteState ({description, toggleOrdering}){
     const dispatch = useDispatch()
     return(
         <>
             <p>{description}</p>
-            <button className='border-2 border-amber-500 bg-gray-300' onClick={() => dispatch(toggle())} >استفاده از این دانه در میکس سفارشی</button>
+            <button className='border-2 border-amber-500 bg-gray-300' onClick={() => toggleOrdering()} >استفاده از این دانه در میکس سفارشی</button>
         </>
     )
 }
