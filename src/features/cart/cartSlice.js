@@ -1,13 +1,21 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    inOrdering : {
-    item: 1,
-    name: "kala1",
-    darsad: 30,
-    weight: 400,
-    fee: 199000,
-    }
+    inOrdering : [{
+        name: "روبوستا",
+        weight: 220,
+        cartPrice: 45000,
+        },
+        {
+            name: "نییمی",
+            weight: 899,
+            cartPrice: 87300,
+            },
+            {
+                name: "سیمنسکشنی",
+                weight: 656,
+                cartPrice: 98292,
+                }]
     
 }
 
@@ -17,10 +25,12 @@ const cartSlice = createSlice(
         name: 'cart',
         initialState,
         reducers:{
-
+            addItem: (state , actions) => {state.inOrdering = [ ...state.inOrdering , actions.payload ]}
         }
     }
 )
 
 
 export default cartSlice.reducer
+
+export const {addItem} = cartSlice.actions

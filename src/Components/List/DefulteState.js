@@ -1,12 +1,10 @@
-import { useDispatch } from 'react-redux'
 
 function DefulteState ({description, toggleOrdering}){
-    const dispatch = useDispatch()
     return(
-        <>
-            <p>{description}</p>
-            <button className='border-2 border-amber-500 bg-gray-300' onClick={() => toggleOrdering()} >استفاده از این دانه در میکس سفارشی</button>
-        </>
+        <div className='flex flex-col justify-around items-center'>
+            <h6 className='text-xs p-3'>{description}</h6>
+            <button className='border-2 border-green-500 bg-green-200 p-1 mb-2' onClick={() => toggleOrdering()} >استفاده از این دانه در میکس سفارشی</button>
+        </div>
     )
 }
 

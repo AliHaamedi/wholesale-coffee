@@ -13,14 +13,14 @@ const initialState = {
     name: "دانه عربیکا ۳۰٪ دارک",
     price: 221000,
     description: "دانه قهوه عربیکا ویژگی های منحصربفردی دارد ",
-    image: "https://upload.wikimedia.org/wikipedia/commons/c/c5/Roasted_coffee_beans.jpg"
+    image: "https://homecoffee.ir/wp-content/uploads/2019/08/Arabica-Coffee-Beans-768x512.jpg"
   },
   {
     id: 3,
-    name: "دانه میکس ۳۰٪ دارک",
+    name: "دانه لیبریکا ۳۰٪ دارک",
     price: 450000,
-    description: "دانه قهوه میکس ویژگی های منحصربفردی دارد ",
-    image: "https://upload.wikimedia.org/wikipedia/commons/c/c5/Roasted_coffee_beans.jpg"
+    description: "دانه قهوه لیبریکا ویژگی های منحصربفردی دارد ",
+    image: "https://homecoffee.ir/wp-content/uploads/2019/08/Peaberry_coffee_beans_close_up-1024x682.jpg"
   }
 ],
   remainingWeight: 1000

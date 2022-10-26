@@ -1,4 +1,9 @@
+import { useSelector} from "react-redux"
+
 function FullCart() {
+    const { inOrdering } = useSelector(state=>state.cart)
+    let num = 1
+    let ids = 1
     return ( 
     <div className="w-full">
         <table className="w-full">
@@ -11,14 +16,16 @@ function FullCart() {
                     <th>قیمت</th>
                     <th>حذف</th>
                 </tr>
-                <tr className="text-center">
-                    <td>1</td>
-                    <td>روبوستا</td>
+                {inOrdering.map((item)=>
+                    <tr key={ids ++} className="text-center">
+                    <td>{num ++}</td>
+                    <td className="text-start">{item.name}</td>
                     <td>۳۰٪</td>
-                    <td>۲۲۰ گرم</td>
-                    <td>۴۵.۰۰۰</td>
+                    <td>{item.weight}</td>
+                    <td>{item.cartPrice}</td>
                     <td><button>*</button></td>
                 </tr>
+                )}
         </tbody>
         </table>
     </div> 
