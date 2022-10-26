@@ -16,12 +16,12 @@ function OrderingState ({remainingWeight, price}) {
     return (
         <>
             <div>
-                <label htmlFor="vol">انتخاب وزن بین 50 تا {remainingWeight} گرم</label>
+                <label htmlFor="vol">انتخاب وزن بین 50 تا {remainingWeight} گرم</label> <br/>
                 <input type="range" id="vol" name="vol" value={vazn} onChange={(e)=> moving(e)} step="50" min="50" max={remainingWeight}  />
             </div>
             <div>
-                <button className='border-2 border-amber-500 bg-gray-300'onClick={() => dispatch(toggle())} >لغو</button>
-                <button className='border-2 border-amber-500 bg-gray-300'>افزودن به سبد خرید</button>
+                <button className='border-2 border-amber-500 bg-gray-300 px-2 mx-2'onClick={() => dispatch(toggle())} >لغو</button>
+                <button className='border-2 border-amber-500 bg-gray-300 px-2 mx-2'>افزودن به سبد خرید</button>
                 <h2>وزن: {vazn} گرم</h2>
                 <h2>قیمت: {gheymat} تومان</h2>
             </div>

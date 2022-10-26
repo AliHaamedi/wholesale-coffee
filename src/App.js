@@ -4,8 +4,9 @@ import CoffeeList from './Components/List/CoffeeList';
 
 function App() {
   return (
-    <div className="container flex">
+    <div className="container mx-auto flex">
       <CoffeeList/>
+      <span className=''>-</span>
       <Cart />
     </div>
   );

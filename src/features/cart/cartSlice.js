@@ -1,7 +1,14 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    value : 0
+    inOrdering : {
+    item: 1,
+    name: "kala1",
+    darsad: 30,
+    weight: 400,
+    fee: 199000,
+    }
+    
 }
 
 
