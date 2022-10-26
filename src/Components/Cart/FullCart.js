@@ -1,9 +1,16 @@
-import { useSelector} from "react-redux"
+import Totall from "./Total"
+import { useSelector ,useDispatch} from "react-redux"
+import { deleteItem } from "../../features/cart/cartSlice"
+
+
 
 function FullCart() {
     const { inOrdering } = useSelector(state=>state.cart)
+    const distpatch = useDispatch()
+    function removeItem(cartID) {
+        distpatch(deleteItem(cartID))
+    }
     let num = 1
-    let ids = 1
     return ( 
     <div className="w-full">
         <table className="w-full">
@@ -17,17 +24,19 @@ function FullCart() {
                     <th>حذف</th>
                 </tr>
                 {inOrdering.map((item)=>
-                    <tr key={ids ++} className="text-center">
+                    <tr key={item.cartID} className="text-center">
                     <td>{num ++}</td>
                     <td className="text-start">{item.name}</td>
                     <td>۳۰٪</td>
                     <td>{item.weight}</td>
                     <td>{item.cartPrice}</td>
-                    <td><button>*</button></td>
+                    <td><button className="border-2 border-red-500 bg-red-300 px-2 mx-2" onClick={()=>removeItem(item.cartID)}>*</button></td>
                 </tr>
                 )}
         </tbody>
         </table>
+
+        <Totall />
     </div> 
     );
 }

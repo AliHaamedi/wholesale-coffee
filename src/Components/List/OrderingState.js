@@ -13,8 +13,8 @@ function OrderingState ({remainingWeight, price , toggleOrdering , name}) {
     const dispatch = useDispatch()
     
     function addToCart (){
-        console.log("item added to cart")
         dispatch(addItem({
+            cartID : Date.now(),
             name,
             weight: vazn,
             cartPrice: gheymat,

@@ -1,6 +1,6 @@
 function EmptCart() {
     return ( 
-        <div>
+        <div className="flex justify-center">
             سبد خرید خالی است
         </div>
      );
