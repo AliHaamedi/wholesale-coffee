@@ -30,9 +30,10 @@ export const coffeeListSlice = createSlice({
   name: 'coffeeList',
   initialState,
   reducers: {
-    toggle : (state) =>{ state.ordering = !state.ordering}
+    toggle : (state) =>{ state.ordering = !state.ordering},
+    reduceReminingWeight : (state,actions) => {state.remainingWeight -= actions.payload}
   },
 });
 
-export const {toggle} = coffeeListSlice.actions
+export const {toggle , reduceReminingWeight} = coffeeListSlice.actions
 export default coffeeListSlice.reducer;

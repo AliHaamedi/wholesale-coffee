@@ -1,15 +1,15 @@
 import { useSelector } from "react-redux";
 
-
 function Totall() {
-    const {inOrdering} = useSelector((state) => state.cart)
-    console.log(inOrdering)
+    
+    const {totalPrice , totalWeight} = useSelector((state) => state.cart)
+
     return (
         <div className="flex justify-around">
-            <button className="border-2 border-red-500 bg-red-300 px-2 mx-2">خالی کردن سبد خرید</button>
-            <h1>وزن کل: </h1>
-            <h1>قیمت کل: </h1>
-        </div> );
+            <h1>وزن کل: {totalWeight}</h1>
+            <h1>قیمت کل: {totalPrice}</h1>
+        </div> 
+        );
 }
 
 export default Totall;

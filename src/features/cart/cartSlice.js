@@ -1,9 +1,9 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice  } from "@reduxjs/toolkit";
 
 const initialState = {
-    inOrdering : [{
-        cartID : 22
-    }]
+    inOrdering : [],
+    totalPrice: 0,
+    totalWeight: 0
 }
 
 
@@ -13,12 +13,9 @@ const cartSlice = createSlice(
         initialState,
         reducers:{
             addItem: (state , actions) => { state.inOrdering = [ ...state.inOrdering , actions.payload ];
-            console.log("Add")
-            },
-            deleteItem : (state ,actions) => {
-            state.
-            console.log(state.inOrdering[0].cartID)
-            console.log("Delete " + actions.payload) }
+            state.totalPrice += actions.payload.cartPrice;
+            state.totalWeight += actions.payload.weight
+            }
         }
     }
 )
@@ -26,4 +23,4 @@ const cartSlice = createSlice(
 
 export default cartSlice.reducer
 
-export const {addItem , deleteItem} = cartSlice.actions
+export const {addItem} = cartSlice.actions
