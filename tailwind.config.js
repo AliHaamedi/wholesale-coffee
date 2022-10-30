@@ -115,7 +115,7 @@ module.exports = {
     },
     aria: {
       checked: 'checked="true"',
-      disabled: 'disabled="true"',
+      disabled: 'disabl ed="true"',
       expanded: 'expanded="true"',
       hidden: 'hidden="true"',
       pressed: 'pressed="true"',
@@ -388,6 +388,10 @@ module.exports = {
         '"Courier New"',
         'monospace',
       ],
+      yekan: ['yekan'],
+      dastnevis: ['dastnevis'],
+      ziba: ['ziba'],
+      island: ['island']
     },
     fontSize: {
       xs: ['0.75rem', { lineHeight: '1rem' }],

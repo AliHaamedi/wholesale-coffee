@@ -8,8 +8,8 @@ function FullCart() {
 
     let num = 1
     return ( 
-    <div className="w-full">
-        <table className="w-full">
+    <div className="w-full flex flex-col justify-between h-screen">
+        <table className="w-full m-2">
         <tbody>
                 <tr className="border-2">
                     <th>آیتم</th>

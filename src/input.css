@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: 'dastnevis';
+    src: url(./assets/fonts/danstevis.otf);
+}
+
+@font-face {
+    font-family: 'yekan';
+    src: url(./assets/fonts/Yekan.ttf);
+}
+
+@font-face {
+    font-family: 'ziba';
+    src: url(./assets/fonts/B\ Ziba_0.ttf);
+}
+@font-face {
+    font-family: 'island';
+    src: url(./assets/fonts/IslandMoments-Regular.ttf);
+}
