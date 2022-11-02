@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux'
-import { addItem } from '../../features/cart/cartSlice';
-import { reduceReminingWeight } from "../../features/coffeeList/coffeeListSlice"
+import { addItem } from '../slice/cartSlice';
+import { reduceReminingWeight } from "../slice/coffeeListSlice"
 
 function OrderingState ({remainingWeight, price , toggleOrdering , name}) {
     const[vazn , setVazn] = useState(50)
