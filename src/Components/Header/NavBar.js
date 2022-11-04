@@ -16,7 +16,7 @@ function NavBar() {
                 </div>
             </div>
             <div className="flex p-2 cursor-pointer relative" >
-            <span className="absolute -top-3">4</span>
+            <span className="absolute -top-3">0</span>
             <FontAwesomeIcon icon={ faCartShopping } size="xl"/>
             </div>
         </div>
